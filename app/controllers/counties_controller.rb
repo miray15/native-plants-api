@@ -6,8 +6,16 @@ class CountiesController < ApplicationController
   end 
 
   def show 
-    @counties = County.find_by(id: params[:id])
+    @county = County.find(params[:id])
     render :show 
-  end
+  end 
+
+    def create 
+      @county = County.create(
+      name: params[:name]
+        )
+      render :show
+    end 
   
+
 end

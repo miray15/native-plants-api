@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
   get "/counties" => "counties#index"
-  get "/friends/:id" => "friends#show"
+  get "/counties/:id" => "counties#show"
+  post "/counties" => "counties#create"
 end
+ 
