@@ -10,12 +10,21 @@ class CountiesController < ApplicationController
     render :show 
   end 
 
-    def create 
-      @county = County.create(
-      name: params[:name]
+  def create 
+    @county = County.create(
+    name: params[:name]
+    )
+    render :show
+  end 
+
+  def update 
+    @county = County.find_by(id: params[:id])
+    @county.update(
+    name: params[:name] || @friend.name
         )
-      render :show
-    end 
+    render :show
+  end 
+    
   
 
 end
