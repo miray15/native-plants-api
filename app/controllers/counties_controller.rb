@@ -24,7 +24,11 @@ class CountiesController < ApplicationController
         )
     render :show
   end 
-    
-  
 
+  def destroy 
+    @county = County.find_by(id: params[:id])
+    @county.destroy 
+    render json: {message: "This county has been deleted successfully"}
+  end
+    
 end

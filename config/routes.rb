@@ -3,5 +3,7 @@ Rails.application.routes.draw do
   get "/counties/:id" => "counties#show"
   post "/counties" => "counties#create"
   patch "/counties/:id" => "counties#update"
-end
+  delete "counties/:id" => "counties#destroy" 
+
+end 
  
