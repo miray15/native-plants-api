@@ -1,1 +1,1 @@
-County.create(name: "Cook", zipcode:60657)
+# County.create(name: "Cook")
