@@ -5,5 +5,9 @@ class CountiesController < ApplicationController
     render :index 
   end 
 
-
+  def show 
+    @counties = County.find_by(id: params[:id])
+    render :show 
+  end
+  
 end
